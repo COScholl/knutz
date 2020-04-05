@@ -2,12 +2,19 @@
 NodeJS server using Express for routes and Mongoose to connect to a MongoDB
 
 ## Current build instructions
-`docker build . -t nodejs-rest`
-`docker run -e VERSION=1.1 -p 9000:3000 nodejs-rest`
+Build directory in Docker container and tag which will replace the hash id
+- `docker build . -t nodejs-rest`
+Run docker container with name 'knutz', environment variable VERSION (1.1), publishing container port to host <host>:<container> with an image name "nodejs-rest".
+- `docker run --name=knutz --env VERSION=1.1 --publish 9000:3000 nodejs-rest`
 
 ## Sources
-https://automationrhapsody.com/build-rest-api-express-node-js-run-docker/
-https://dev.to/nedsoft/testing-nodejs-express-api-with-jest-and-supertest-1km6
-https://medium.com/@saplos123456/using-es6-import-and-export-statements-for-jest-testing-in-node-js-b20c8bd9041c
-https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment
-https://www.freecodecamp.org/news/how-to-enable-es6-and-beyond-syntax-with-node-and-express-68d3e11fe1ab/
+Mozilla Express Web Framework
+- https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment
+Transpiling ES6+ syntax with Node and Express
+- https://www.freecodecamp.org/news/how-to-enable-es6-and-beyond-syntax-with-node-and-express-68d3e11fe1ab/
+Compose Dockerfile to run Express on Node within Docker
+- https://automationrhapsody.com/build-rest-api-express-node-js-run-docker/
+Testing Express on NodeJs with Jest and Supertest
+- https://dev.to/nedsoft/testing-nodejs-express-api-with-jest-and-supertest-1km6
+- https://zellwk.com/blog/endpoint-testing/
+- https://medium.com/@saplos123456/using-es6-import-and-export-statements-for-jest-testing-in-node-js-b20c8bd9041c
