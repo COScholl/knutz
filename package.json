@@ -4,7 +4,13 @@
   "description": "NodeJS server using Express for routes and Mongoose to connect to a MongoDB",
   "main": "index.js",
   "scripts": {
-    "server": "node ./server/bin/www",
+    "start": "yarn dev",
+    "build": "yarn clean && yarn transpile",
+    "server": "node ./dist-server/bin/www",
+    "dev": "yarn build && yarn server",
+    "prod": "NODE_ENV=production yarn build && yarn server",
+    "transpile": "babel ./server --out-dir dist-server",
+    "clean": "rimraf dist-server",
     "test": "jest"
   },
   "jest": {
@@ -23,22 +29,25 @@
   "license": "MIT",
   "private": false,
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.9.0",
     "babel-jest": "^25.2.6",
-    "babel-preset-env": "^1.7.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "jest": "^25.2.7",
     "nodemon": "^2.0.2",
+    "rimraf": "^3.0.2",
     "supertest": "^4.0.2"
   },
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
     "debug": "^4.1.1",
     "express": "^4.17.1",
-    "http": "^0.0.1-security"
+    "express-generator": "^4.16.1",
+    "http": "^0.0.1-security",
+    "morgan": "^1.10.0"
   }
 }
