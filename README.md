@@ -1,6 +1,10 @@
 # knutz
 NodeJS server using Express for routes and Mongoose to connect to a MongoDB
 
+## Current build instructions
+`docker build . -t nodejs-rest`
+`docker run -e VERSION=1.1 -p 9000:3000 nodejs-rest`
+
 ## Sources
 https://automationrhapsody.com/build-rest-api-express-node-js-run-docker/
 https://dev.to/nedsoft/testing-nodejs-express-api-with-jest-and-supertest-1km6
