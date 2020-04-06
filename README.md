@@ -2,10 +2,16 @@
 NodeJS server using Express for routes and Mongoose to connect to a MongoDB
 
 ## Current build instructions
-Build directory in Docker container and tag which will replace the hash id
+<!-- Build directory in Docker container and tag which will replace the hash id
 - `docker build . -t nodejs-rest`
 Run docker container with name 'knutz', environment variable VERSION (1.1), publishing container port to host <host>:<container> with an image name "nodejs-rest".
-- `docker run --name=knutz --env VERSION=1.1 --publish 9000:3000 nodejs-rest`
+- `docker run --name=knutz --network=zygag --env VERSION=1.1 --publish 9000:3000 nodejs-rest` -->
+Currently working on using a docker-compose to make sure that this service connects to the local bridge network called `xygag`.
+```bash
+$ docker-compose up
+```
+### TODO:
+Learn namespaces for networking to get this to talk to narneso.
 
 ## Sources
 Mozilla Express Web Framework

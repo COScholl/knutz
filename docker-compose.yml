@@ -1,0 +1,17 @@
+# version of docker-compose tool
+version: '3.7'
+# services to deploy (containers within image)
+services:
+  # name of container; name used to other containers to find
+  knutz:
+    image: node:current-alpine
+    build: .
+    ports:
+      - 9000:3000
+    container_name: knutz
+    networks:
+      - knutz_net
+
+networks:
+  knutz_net:
+    name: xygag
