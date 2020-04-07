@@ -11,15 +11,20 @@ Currently working on using a docker-compose to make sure that this service conne
 $ docker-compose up
 ```
 ### TODO:
-Learn namespaces for networking to get this to talk to narneso.
+~~Learn namespaces for networking to get this to talk to narneso~~
+Testing Mongoose
+Testing NodeJS
 
 ## Sources
 Mozilla Express Web Framework
 - https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment
+
 Transpiling ES6+ syntax with Node and Express
 - https://www.freecodecamp.org/news/how-to-enable-es6-and-beyond-syntax-with-node-and-express-68d3e11fe1ab/
+
 Compose Dockerfile to run Express on Node within Docker
 - https://automationrhapsody.com/build-rest-api-express-node-js-run-docker/
+
 Testing Express on NodeJs with Jest and Supertest
 - https://dev.to/nedsoft/testing-nodejs-express-api-with-jest-and-supertest-1km6
 - https://zellwk.com/blog/endpoint-testing/

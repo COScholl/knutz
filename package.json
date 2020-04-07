@@ -11,7 +11,8 @@
     "prod": "NODE_ENV=production yarn build && yarn server",
     "transpile": "babel ./server --out-dir dist-server",
     "clean": "rimraf dist-server",
-    "test": "jest"
+    "test": "jest",
+    "watch:dev": "nodemon"
   },
   "jest": {
     "testEnvironment": "node",
@@ -23,6 +24,11 @@
     "presets": [
       "@babel/preset-env"
     ]
+  },
+  "nodemonConfig": {
+    "exec": "npm run dev",
+    "watch": ["server/*", "public/*"],
+    "ignore": ["**/__tests__/**", "*.test.js", "*.spec.js"]
   },
   "repository": "git@github.com:COScholl/knutz.git",
   "author": "Chris Scholl <chris.o.scholl@gmail.com>",
