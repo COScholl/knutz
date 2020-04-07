@@ -27,8 +27,15 @@
   },
   "nodemonConfig": {
     "exec": "npm run dev",
-    "watch": ["server/*", "public/*"],
-    "ignore": ["**/__tests__/**", "*.test.js", "*.spec.js"]
+    "watch": [
+      "server/*",
+      "public/*"
+    ],
+    "ignore": [
+      "**/__tests__/**",
+      "*.test.js",
+      "*.spec.js"
+    ]
   },
   "repository": "git@github.com:COScholl/knutz.git",
   "author": "Chris Scholl <chris.o.scholl@gmail.com>",
@@ -38,6 +45,7 @@
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.9.0",
+    "@shelf/jest-mongodb": "^1.1.5",
     "babel-jest": "^25.2.6",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",

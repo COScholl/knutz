@@ -34,3 +34,4 @@ Testing Express on NodeJs with Jest and Supertest
 
 Testing Mongoose with Jest
 https://mongoosejs.com/docs/jest.html
+https://medium.com/javascript-in-plain-english/how-i-setup-unit-test-for-mongodb-using-jest-mongoose-103b772ee164
