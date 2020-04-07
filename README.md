@@ -12,7 +12,9 @@ $ docker-compose up
 ```
 ### TODO:
 ~~Learn namespaces for networking to get this to talk to narneso~~
+
 Testing Mongoose
+
 Testing NodeJS
 
 ## Sources
