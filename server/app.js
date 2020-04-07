@@ -8,15 +8,15 @@ import indexRouter from './routes/index';
 // import usersRouter from './routes/users';
 
 const app = new express(); // eslint-disable-line new-cap
-// @TODO: set up docker container between knutz and naresso
-const mongoURI = 'mongodb://root:rootpassword@localhost:20000/admin';
+const mongoURI = process.env.MONGO_URL;
 
 mongoose.connect(
   mongoURI,
   { useNewUrlParser: true, useUnifiedTopology: true },
 );
 const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'Mongo connection error'));
+// @TODO: look into using morgan correctly
+logger(db);
 
 app.use(logger('dev'));
 app.use(express.json());
