@@ -31,3 +31,6 @@ Testing Express on NodeJs with Jest and Supertest
 - https://dev.to/nedsoft/testing-nodejs-express-api-with-jest-and-supertest-1km6
 - https://zellwk.com/blog/endpoint-testing/
 - https://medium.com/@saplos123456/using-es6-import-and-export-statements-for-jest-testing-in-node-js-b20c8bd9041c
+
+Testing Mongoose with Jest
+https://mongoosejs.com/docs/jest.html
