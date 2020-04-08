@@ -11,18 +11,13 @@
     "prod": "NODE_ENV=production yarn build && yarn server",
     "transpile": "babel ./server --out-dir dist-server",
     "clean": "rimraf dist-server",
-    "test": "jest",
+    "test": "jest --config ./jest.config.js",
     "watch:dev": "nodemon"
   },
   "jest": {
     "testEnvironment": "node",
     "coveragePathIgnorePatterns": [
       "/node_modules/"
-    ]
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
     ]
   },
   "nodemonConfig": {

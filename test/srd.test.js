@@ -11,6 +11,9 @@ const setupFunc = async () => {
     }
   });
 };
+const teardownFunc = () => {
+  mongoose.connection.close();
+};
 
 /* eslint-disable */
 describe('SRDModel test', () => {
@@ -20,4 +23,6 @@ describe('SRDModel test', () => {
   it('sets up some stuff', () => {
     expect(true).toBe(true);
   });
+
+  teardownFunc();
 });
